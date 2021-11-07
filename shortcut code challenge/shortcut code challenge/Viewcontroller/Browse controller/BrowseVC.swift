@@ -45,6 +45,7 @@ class BrowseVC: UIViewController {
         loadComicBunch()
         tableView.dataSource = self
         tableView.delegate = self
+        requestNotificationAuthorization()
         searchSetup()
         // Do any additional setup after loading the view.
     }

@@ -30,6 +30,8 @@
 		8236DA88273807A800753985 /* ComicEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA86273807A800753985 /* ComicEntity+CoreDataProperties.swift */; };
 		8236DA8B273841EB00753985 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA8A273841EA00753985 /* FavoriteVC.swift */; };
 		8236DA8D2738420100753985 /* FavoriteTVHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA8C2738420100753985 /* FavoriteTVHandler.swift */; };
+		8236DA902738491100753985 /* publicNamesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA8F2738491100753985 /* publicNamesEnum.swift */; };
+		8236DA9227384AA300753985 /* NotificationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA9127384AA300753985 /* NotificationPermission.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		8236DA86273807A800753985 /* ComicEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComicEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8236DA8A273841EA00753985 /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
 		8236DA8C2738420100753985 /* FavoriteTVHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTVHandler.swift; sourceTree = "<group>"; };
+		8236DA8F2738491100753985 /* publicNamesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicNamesEnum.swift; sourceTree = "<group>"; };
+		8236DA9127384AA300753985 /* NotificationPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermission.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		8236DA462737D8A000753985 /* shortcut code challenge */ = {
 			isa = PBXGroup;
 			children = (
+				8236DA8E273848FD00753985 /* Enums */,
 				8236DA7C2738050800753985 /* IBDesignable */,
 				8236DA6B2738007400753985 /* Viewcontroller */,
 				8236DA662737FDA100753985 /* Model */,
@@ -152,6 +157,7 @@
 				8236DA73273802C000753985 /* WaitingTVC.swift */,
 				8236DA752738031300753985 /* SearchSRUHandler.swift */,
 				8236DA772738033400753985 /* SearchSBHandler.swift */,
+				8236DA9127384AA300753985 /* NotificationPermission.swift */,
 			);
 			path = "Browse controller";
 			sourceTree = "<group>";
@@ -196,6 +202,14 @@
 				8236DA8C2738420100753985 /* FavoriteTVHandler.swift */,
 			);
 			path = "Favorite Controller";
+			sourceTree = "<group>";
+		};
+		8236DA8E273848FD00753985 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				8236DA8F2738491100753985 /* publicNamesEnum.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +292,8 @@
 				8236DA522737D8A000753985 /* shortcut_code_challenge.xcdatamodeld in Sources */,
 				8236DA87273807A800753985 /* ComicEntity+CoreDataClass.swift in Sources */,
 				8236DA88273807A800753985 /* ComicEntity+CoreDataProperties.swift in Sources */,
+				8236DA9227384AA300753985 /* NotificationPermission.swift in Sources */,
+				8236DA902738491100753985 /* publicNamesEnum.swift in Sources */,
 				8236DA652737DA1F00753985 /* Int.swift in Sources */,
 				8236DA8D2738420100753985 /* FavoriteTVHandler.swift in Sources */,
 				8236DA70273801F800753985 /* BrowseTVC.swift in Sources */,
@@ -442,6 +458,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
@@ -471,6 +488,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
