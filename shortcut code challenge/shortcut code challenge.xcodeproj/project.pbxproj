@@ -28,6 +28,8 @@
 		8236DA7E2738052400753985 /* Custom Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA7D2738052400753985 /* Custom Button.swift */; };
 		8236DA87273807A800753985 /* ComicEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA85273807A800753985 /* ComicEntity+CoreDataClass.swift */; };
 		8236DA88273807A800753985 /* ComicEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA86273807A800753985 /* ComicEntity+CoreDataProperties.swift */; };
+		8236DA8B273841EB00753985 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA8A273841EA00753985 /* FavoriteVC.swift */; };
+		8236DA8D2738420100753985 /* FavoriteTVHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA8C2738420100753985 /* FavoriteTVHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		8236DA7D2738052400753985 /* Custom Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom Button.swift"; sourceTree = "<group>"; };
 		8236DA85273807A800753985 /* ComicEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComicEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8236DA86273807A800753985 /* ComicEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComicEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8236DA8A273841EA00753985 /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
+		8236DA8C2738420100753985 /* FavoriteTVHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTVHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 		8236DA6B2738007400753985 /* Viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
+				8236DA89273841CE00753985 /* Favorite Controller */,
 				8236DA79273803F800753985 /* Detail Controller */,
 				8236DA6C2738008600753985 /* Browse controller */,
 			);
@@ -182,6 +187,15 @@
 				8236DA86273807A800753985 /* ComicEntity+CoreDataProperties.swift */,
 			);
 			path = ComicEntity;
+			sourceTree = "<group>";
+		};
+		8236DA89273841CE00753985 /* Favorite Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8236DA8A273841EA00753985 /* FavoriteVC.swift */,
+				8236DA8C2738420100753985 /* FavoriteTVHandler.swift */,
+			);
+			path = "Favorite Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +279,9 @@
 				8236DA87273807A800753985 /* ComicEntity+CoreDataClass.swift in Sources */,
 				8236DA88273807A800753985 /* ComicEntity+CoreDataProperties.swift in Sources */,
 				8236DA652737DA1F00753985 /* Int.swift in Sources */,
+				8236DA8D2738420100753985 /* FavoriteTVHandler.swift in Sources */,
 				8236DA70273801F800753985 /* BrowseTVC.swift in Sources */,
+				8236DA8B273841EB00753985 /* FavoriteVC.swift in Sources */,
 				8236DA482737D8A000753985 /* AppDelegate.swift in Sources */,
 				8236DA74273802C000753985 /* WaitingTVC.swift in Sources */,
 				8236DA4A2737D8A000753985 /* SceneDelegate.swift in Sources */,

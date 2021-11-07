@@ -72,7 +72,6 @@ class DetailVC: UIViewController {
             if UIScreen.main.traitCollection.userInterfaceIdiom == .pad {
                 ac.popoverPresentationController?.sourceView = self.view
                 let w = UIScreen.main.bounds.width
-                let h = UIScreen.main.bounds.height
                 ac.popoverPresentationController?.sourceRect = CGRect(origin: CGPoint(x: (w / 2) , y: 50), size: CGSize(width: 300, height: 400))
             }
             present(ac, animated: true)
@@ -182,26 +181,10 @@ class DetailVC: UIViewController {
         fetch.predicate = NSPredicate(format:"num == \(comicData.num)")
         
         if let object = (try? managedContext.fetch(fetch))?.first {
-            if comicData == nil {
-                var imageObj: UIImage?
                 if let imageData = object.imageData {
-                    imageObj = UIImage(data: imageData)
+                    comicImage = UIImage(data: imageData)
                 }
-                comicData = ComicModel(num: Int(object.num), description: object.description, publishedDate: object.publishedDate ?? Date(), link: object.link ?? "", image: imageObj, news: object.news ?? "", safeTitle: object.safeTitle ?? "", title: object.title ?? "", transcript: object.transcript ?? "")
-            }
             isFavorite = true
         }//: DATAFETCH OBJECT CHECK
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
