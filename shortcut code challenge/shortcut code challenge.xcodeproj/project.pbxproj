@@ -14,6 +14,9 @@
 		8236DA522737D8A000753985 /* shortcut_code_challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA502737D8A000753985 /* shortcut_code_challenge.xcdatamodeld */; };
 		8236DA542737D8A300753985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8236DA532737D8A300753985 /* Assets.xcassets */; };
 		8236DA572737D8A300753985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8236DA552737D8A300753985 /* LaunchScreen.storyboard */; };
+		8236DA602737D9C300753985 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA5F2737D9C300753985 /* Network.swift */; };
+		8236DA622737D9EA00753985 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA612737D9EA00753985 /* NetworkErrors.swift */; };
+		8236DA652737DA1F00753985 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA642737DA1F00753985 /* Int.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		8236DA532737D8A300753985 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8236DA562737D8A300753985 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8236DA582737D8A300753985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8236DA5F2737D9C300753985 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		8236DA612737D9EA00753985 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		8236DA642737DA1F00753985 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 		8236DA462737D8A000753985 /* shortcut code challenge */ = {
 			isa = PBXGroup;
 			children = (
+				8236DA632737DA0F00753985 /* Extensions */,
+				8236DA5E2737D9A200753985 /* Services */,
 				8236DA472737D8A000753985 /* AppDelegate.swift */,
 				8236DA492737D8A000753985 /* SceneDelegate.swift */,
 				8236DA4B2737D8A000753985 /* ViewController.swift */,
@@ -68,6 +76,23 @@
 				8236DA502737D8A000753985 /* shortcut_code_challenge.xcdatamodeld */,
 			);
 			path = "shortcut code challenge";
+			sourceTree = "<group>";
+		};
+		8236DA5E2737D9A200753985 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8236DA5F2737D9C300753985 /* Network.swift */,
+				8236DA612737D9EA00753985 /* NetworkErrors.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8236DA632737DA0F00753985 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8236DA642737DA1F00753985 /* Int.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8236DA602737D9C300753985 /* Network.swift in Sources */,
 				8236DA522737D8A000753985 /* shortcut_code_challenge.xcdatamodeld in Sources */,
 				8236DA4C2737D8A000753985 /* ViewController.swift in Sources */,
+				8236DA652737DA1F00753985 /* Int.swift in Sources */,
 				8236DA482737D8A000753985 /* AppDelegate.swift in Sources */,
 				8236DA4A2737D8A000753985 /* SceneDelegate.swift in Sources */,
+				8236DA622737D9EA00753985 /* NetworkErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +328,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -327,6 +356,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
