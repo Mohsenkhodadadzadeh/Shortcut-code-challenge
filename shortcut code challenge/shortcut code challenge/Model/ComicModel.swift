@@ -74,4 +74,20 @@ struct ComicModel: Codable {
         return nil
     }
     
+    init(num: Int, description: String, publishedDate: Date, link: String, image: UIImage?, news: String, safeTitle: String, title: String, transcript: String) {
+        self.num = num
+        self.description = description
+        let calenderDate = Calendar.current.dateComponents([.day, .year, .month], from: publishedDate)
+        self.publishedDay = "\(calenderDate.day ?? 0)"
+        self.publishedMonth = "\(calenderDate.month ?? 0)"
+        self.publishedYear = "\(calenderDate.year ?? 0)"
+        self.link = link
+        self.image = image
+        self.news = news
+        self.safeTitle = safeTitle
+        self.title = title
+        self.transcript = transcript
+        self.imageAddress = ""
+    }
+    
 }
