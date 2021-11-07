@@ -73,11 +73,7 @@ class BrowseVC: UIViewController {
     }
     
     func loadComicBunch(comicId: Int? = nil) {
-       // if comicId != nil {
             comicLoadedCount = 0
-//        } else {
-//            comicLoadedCount = latestReceiveId > comicBunchCount ? comicBunchCount : comicBunchCount - latestReceiveId
-//        }
         
         getComicData(for: comicId)
     }

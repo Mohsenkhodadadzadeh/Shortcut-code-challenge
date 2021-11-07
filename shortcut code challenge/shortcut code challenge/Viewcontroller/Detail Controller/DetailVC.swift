@@ -53,19 +53,32 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupPage()
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func bookMarkButtonPress(_ sender: Any) {
-        
+        if isImageLoaded {
+            bookmark(newStatus: !isFavorite)
+        }
     }
     
-    
-    
-    
-    
-    
+    @IBAction func shareButtonPress(_ sender: Any) {
+        
+        if let image = comicImage {
+            let item = [image]
+            let ac = UIActivityViewController(activityItems: item, applicationActivities: nil)
+            if UIScreen.main.traitCollection.userInterfaceIdiom == .pad {
+                ac.popoverPresentationController?.sourceView = self.view
+                let w = UIScreen.main.bounds.width
+                let h = UIScreen.main.bounds.height
+                ac.popoverPresentationController?.sourceRect = CGRect(origin: CGPoint(x: (w / 2) , y: 50), size: CGSize(width: 300, height: 400))
+            }
+            present(ac, animated: true)
+        }
+        
+    }
     
     private func setupPage() {
         

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -143,6 +144,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.84368778499999997" green="0.84368778499999997" blue="0.84368778499999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="E9z-Lh-lFi" kind="relationship" relationship="viewControllers" id="nfe-6t-a0Z"/>
@@ -157,7 +161,12 @@
         <scene sceneID="D4W-G6-EjK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E9z-Lh-lFi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="vtB-sr-DbN"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="vtB-sr-DbN">
+                        <imageReference key="image" image="photo.on.rectangle.angled" catalog="system" symbolScale="default"/>
+                        <imageReference key="landscapeImage" image="photo.on.rectangle.angled" catalog="system" symbolScale="default"/>
+                        <imageReference key="largeContentSizeImage" image="photo.on.rectangle.angled" catalog="system" symbolScale="default"/>
+                        <imageReference key="selectedImage" image="photo.on.rectangle.angled" catalog="system" symbolScale="default"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="5GN-aa-Dxh">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -176,7 +185,10 @@
         <scene sceneID="gcz-AU-FWw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MO1-V0-VYo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="tOV-u3-GPb"/>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="tOV-u3-GPb">
+                        <imageReference key="image" image="star.fill" catalog="system" symbolScale="default"/>
+                        <imageReference key="landscapeImage" image="star.fill" catalog="system" symbolScale="default"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="RPt-ra-F2t">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -205,11 +217,11 @@
                                     <constraint firstAttribute="height" constant="350" id="J9v-V9-x89"/>
                                 </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPG-GH-Tsb">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPG-GH-Tsb">
                                 <rect key="frame" x="0.0" y="350" width="414" height="463"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOu-07-qO8">
-                                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="318"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ud-hE-yd8">
                                                 <rect key="frame" x="20" y="20" width="360" height="37"/>
@@ -221,14 +233,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksI-AL-dmd">
-                                                <rect key="frame" x="20" y="97" width="360" height="213"/>
+                                                <rect key="frame" x="20" y="97" width="360" height="131"/>
                                                 <string key="text">Although grad students, suddenly reminded that food exists, tend to just grab and devour both without further discussion. Although grad students, suddenly reminded that food exists, tend to just grab and devour both without further discussion. Although grad students, suddenly reminded that food exists, tend to just grab and devour both without further discussion.</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" red="0.89707721539999996" green="0.89663772119999996" blue="1" alpha="0.8895340692" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUm-oi-agE" customClass="CustomButton" customModule="shortcut_code_challenge" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="330" width="340" height="50"/>
+                                                <rect key="frame" x="30" y="248" width="340" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="RRT-e3-sdr"/>
@@ -254,7 +266,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="shareButtonPress:" destination="AW8-FY-UJv" eventType="touchUpInside" id="lQC-7n-xmX"/>
+                                                    <action selector="shareButtonPress:" destination="AW8-FY-UJv" eventType="touchUpInside" id="sfN-Kn-uRS"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -263,7 +275,6 @@
                                             <constraint firstItem="ksI-AL-dmd" firstAttribute="width" secondItem="8Ud-hE-yd8" secondAttribute="width" id="DPc-rT-Yoe"/>
                                             <constraint firstAttribute="bottom" secondItem="KUm-oi-agE" secondAttribute="bottom" constant="20" id="FMM-vm-8y0"/>
                                             <constraint firstAttribute="trailing" secondItem="KUm-oi-agE" secondAttribute="trailing" constant="30" id="H1X-0Y-czf"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="400" id="Hu1-kd-9wK"/>
                                             <constraint firstItem="ksI-AL-dmd" firstAttribute="top" secondItem="8Ud-hE-yd8" secondAttribute="bottom" constant="40" id="JsW-bm-rbz"/>
                                             <constraint firstItem="8Ud-hE-yd8" firstAttribute="top" secondItem="DOu-07-qO8" secondAttribute="top" constant="20" id="Jtp-ne-1xN"/>
                                             <constraint firstItem="KUm-oi-agE" firstAttribute="leading" secondItem="DOu-07-qO8" secondAttribute="leading" constant="30" id="Ksj-Vk-gYJ"/>
@@ -271,7 +282,6 @@
                                             <constraint firstItem="KUm-oi-agE" firstAttribute="top" secondItem="ksI-AL-dmd" secondAttribute="bottom" constant="20" id="WVW-75-Zya"/>
                                             <constraint firstItem="ksI-AL-dmd" firstAttribute="leading" secondItem="8Ud-hE-yd8" secondAttribute="leading" id="a6P-qQ-nWg"/>
                                             <constraint firstItem="8Ud-hE-yd8" firstAttribute="leading" secondItem="DOu-07-qO8" secondAttribute="leading" constant="20" id="jlK-HB-EVl"/>
-                                            <constraint firstAttribute="width" constant="400" id="kIQ-zs-73O"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -326,6 +336,7 @@
                             <constraint firstItem="7Sg-2K-cyO" firstAttribute="trailing" secondItem="klp-tF-AXu" secondAttribute="trailing" id="gWd-ZI-cmo"/>
                             <constraint firstItem="klp-tF-AXu" firstAttribute="bottom" secondItem="nLj-X3-ms7" secondAttribute="bottom" constant="20" id="lwI-0b-ZMC"/>
                             <constraint firstItem="klp-tF-AXu" firstAttribute="top" secondItem="dri-Hh-vOu" secondAttribute="top" id="mNn-A2-cgb"/>
+                            <constraint firstItem="DOu-07-qO8" firstAttribute="width" secondItem="klp-tF-AXu" secondAttribute="width" multiplier="0.966184" id="mde-ta-SWO"/>
                             <constraint firstItem="5Ci-1u-fgu" firstAttribute="centerY" secondItem="nLj-X3-ms7" secondAttribute="centerY" id="rzT-qX-jag"/>
                             <constraint firstItem="XpC-RO-e2D" firstAttribute="bottom" secondItem="nLj-X3-ms7" secondAttribute="bottom" id="vA8-wG-vpg"/>
                             <constraint firstItem="7Sg-2K-cyO" firstAttribute="trailing" secondItem="hPG-GH-Tsb" secondAttribute="trailing" id="wF7-gD-O2a"/>
@@ -352,6 +363,8 @@
     </designables>
     <resources>
         <image name="bookmark" catalog="system" width="112" height="128"/>
+        <image name="photo.on.rectangle.angled" catalog="system" width="128" height="100"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
