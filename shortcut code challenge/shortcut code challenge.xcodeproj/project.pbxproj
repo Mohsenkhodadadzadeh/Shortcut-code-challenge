@@ -35,6 +35,10 @@
 		8236DA99273850DB00753985 /* NotResponse404.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA98273850DB00753985 /* NotResponse404.swift */; };
 		8236DA9B2738510700753985 /* ServerError500.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA9A2738510700753985 /* ServerError500.swift */; };
 		8236DA9D27385E3C00753985 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA9C27385E3C00753985 /* UIWindow.swift */; };
+		8236DAA12738612B00753985 /* ImageDownloaderObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DAA02738612B00753985 /* ImageDownloaderObservable.swift */; };
+		8236DAA32738615C00753985 /* ImageDownloaderObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DAA22738615C00753985 /* ImageDownloaderObserver.swift */; };
+		8236DAA52738625100753985 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DAA42738625100753985 /* ImageDownloader.swift */; };
+		8236DAA72738647300753985 /* DetailImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DAA62738647300753985 /* DetailImageDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +72,10 @@
 		8236DA98273850DB00753985 /* NotResponse404.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotResponse404.swift; sourceTree = "<group>"; };
 		8236DA9A2738510700753985 /* ServerError500.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError500.swift; sourceTree = "<group>"; };
 		8236DA9C27385E3C00753985 /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
+		8236DAA02738612B00753985 /* ImageDownloaderObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderObservable.swift; sourceTree = "<group>"; };
+		8236DAA22738615C00753985 /* ImageDownloaderObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderObserver.swift; sourceTree = "<group>"; };
+		8236DAA42738625100753985 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		8236DAA62738647300753985 /* DetailImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,7 @@
 		8236DA5E2737D9A200753985 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8236DA9E273860C300753985 /* Image Download Service */,
 				8236DA932738503100753985 /* Chain network */,
 				8236DA5F2737D9C300753985 /* Network.swift */,
 				8236DA612737D9EA00753985 /* NetworkErrors.swift */,
@@ -172,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				8236DA7A2738041600753985 /* DetailVC.swift */,
+				8236DAA62738647300753985 /* DetailImageDownloader.swift */,
 			);
 			path = "Detail Controller";
 			sourceTree = "<group>";
@@ -219,6 +229,24 @@
 				8236DA9A2738510700753985 /* ServerError500.swift */,
 			);
 			path = "Chain network";
+			sourceTree = "<group>";
+		};
+		8236DA9E273860C300753985 /* Image Download Service */ = {
+			isa = PBXGroup;
+			children = (
+				8236DA9F273860D700753985 /* Observer Protocoles */,
+				8236DAA42738625100753985 /* ImageDownloader.swift */,
+			);
+			path = "Image Download Service";
+			sourceTree = "<group>";
+		};
+		8236DA9F273860D700753985 /* Observer Protocoles */ = {
+			isa = PBXGroup;
+			children = (
+				8236DAA02738612B00753985 /* ImageDownloaderObservable.swift */,
+				8236DAA22738615C00753985 /* ImageDownloaderObserver.swift */,
+			);
+			path = "Observer Protocoles";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,9 +333,11 @@
 				8236DA97273850AC00753985 /* Response200.swift in Sources */,
 				8236DA87273807A800753985 /* ComicEntity+CoreDataClass.swift in Sources */,
 				8236DA88273807A800753985 /* ComicEntity+CoreDataProperties.swift in Sources */,
+				8236DAA12738612B00753985 /* ImageDownloaderObservable.swift in Sources */,
 				8236DA652737DA1F00753985 /* Int.swift in Sources */,
 				8236DA8D2738420100753985 /* FavoriteTVHandler.swift in Sources */,
 				8236DA70273801F800753985 /* BrowseTVC.swift in Sources */,
+				8236DAA52738625100753985 /* ImageDownloader.swift in Sources */,
 				8236DA9D27385E3C00753985 /* UIWindow.swift in Sources */,
 				8236DA8B273841EB00753985 /* FavoriteVC.swift in Sources */,
 				8236DA482737D8A000753985 /* AppDelegate.swift in Sources */,
@@ -316,7 +346,9 @@
 				8236DA622737D9EA00753985 /* NetworkErrors.swift in Sources */,
 				8236DA682737FDC200753985 /* ComicModel.swift in Sources */,
 				8236DA762738031300753985 /* SearchSRUHandler.swift in Sources */,
+				8236DAA32738615C00753985 /* ImageDownloaderObserver.swift in Sources */,
 				8236DA7B2738041600753985 /* DetailVC.swift in Sources */,
+				8236DAA72738647300753985 /* DetailImageDownloader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

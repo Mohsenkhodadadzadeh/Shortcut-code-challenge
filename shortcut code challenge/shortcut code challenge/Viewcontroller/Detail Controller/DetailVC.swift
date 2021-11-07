@@ -19,6 +19,9 @@ class DetailVC: UIViewController {
     @IBOutlet weak var bookmarkImage: UIImageView!
     
     
+    //MARK: variables for detail image downloader observer
+    var _id: Int = 1
+    
     var comicData: ComicModel!
     
     fileprivate var isFavorite: Bool = false {
@@ -31,7 +34,7 @@ class DetailVC: UIViewController {
         }
     }
     
-    fileprivate var isImageLoaded: Bool = false {
+     var isImageLoaded: Bool = false {
         didSet {
             if isImageLoaded {
                 bookmarkImage.isHidden = false
@@ -41,7 +44,7 @@ class DetailVC: UIViewController {
         }
     }
     
-    fileprivate var comicImage: UIImage? {
+     var comicImage: UIImage? {
         didSet {
             if comicImage != nil {
                 comicImageView.image = comicImage
@@ -83,11 +86,11 @@ class DetailVC: UIViewController {
         
         self.managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        loadFavorite()
-        
         if comicData.image == nil {
-            loadComicImage()
+            let observableObj: ImageDownloaderObservable = ImageDownloader()
+            observableObj.add(object: self)
         }
+        loadFavorite()
         
         if let date = comicData.longDate {
             dateLabel.text = "Published on: \(date)"
