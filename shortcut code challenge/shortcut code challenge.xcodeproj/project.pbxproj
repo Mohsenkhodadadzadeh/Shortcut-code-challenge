@@ -30,6 +30,11 @@
 		8236DA88273807A800753985 /* ComicEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA86273807A800753985 /* ComicEntity+CoreDataProperties.swift */; };
 		8236DA8B273841EB00753985 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA8A273841EA00753985 /* FavoriteVC.swift */; };
 		8236DA8D2738420100753985 /* FavoriteTVHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA8C2738420100753985 /* FavoriteTVHandler.swift */; };
+		8236DA952738508500753985 /* NetworkChainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA942738508500753985 /* NetworkChainProtocol.swift */; };
+		8236DA97273850AC00753985 /* Response200.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA96273850AC00753985 /* Response200.swift */; };
+		8236DA99273850DB00753985 /* NotResponse404.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA98273850DB00753985 /* NotResponse404.swift */; };
+		8236DA9B2738510700753985 /* ServerError500.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA9A2738510700753985 /* ServerError500.swift */; };
+		8236DA9D27385E3C00753985 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236DA9C27385E3C00753985 /* UIWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,11 @@
 		8236DA86273807A800753985 /* ComicEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComicEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8236DA8A273841EA00753985 /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
 		8236DA8C2738420100753985 /* FavoriteTVHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTVHandler.swift; sourceTree = "<group>"; };
+		8236DA942738508500753985 /* NetworkChainProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChainProtocol.swift; sourceTree = "<group>"; };
+		8236DA96273850AC00753985 /* Response200.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response200.swift; sourceTree = "<group>"; };
+		8236DA98273850DB00753985 /* NotResponse404.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotResponse404.swift; sourceTree = "<group>"; };
+		8236DA9A2738510700753985 /* ServerError500.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError500.swift; sourceTree = "<group>"; };
+		8236DA9C27385E3C00753985 /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +119,7 @@
 		8236DA5E2737D9A200753985 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8236DA932738503100753985 /* Chain network */,
 				8236DA5F2737D9C300753985 /* Network.swift */,
 				8236DA612737D9EA00753985 /* NetworkErrors.swift */,
 				8236DA692738003700753985 /* ServerEnvironments.plist */,
@@ -120,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				8236DA642737DA1F00753985 /* Int.swift */,
+				8236DA9C27385E3C00753985 /* UIWindow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -198,6 +210,17 @@
 			path = "Favorite Controller";
 			sourceTree = "<group>";
 		};
+		8236DA932738503100753985 /* Chain network */ = {
+			isa = PBXGroup;
+			children = (
+				8236DA942738508500753985 /* NetworkChainProtocol.swift */,
+				8236DA96273850AC00753985 /* Response200.swift */,
+				8236DA98273850DB00753985 /* NotResponse404.swift */,
+				8236DA9A2738510700753985 /* ServerError500.swift */,
+			);
+			path = "Chain network";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,16 +294,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				8236DA722738029600753985 /* BrowseTVHandler.swift in Sources */,
+				8236DA99273850DB00753985 /* NotResponse404.swift in Sources */,
+				8236DA9B2738510700753985 /* ServerError500.swift in Sources */,
 				8236DA602737D9C300753985 /* Network.swift in Sources */,
 				8236DA6E273800A500753985 /* BrowseVC.swift in Sources */,
 				8236DA7E2738052400753985 /* Custom Button.swift in Sources */,
+				8236DA952738508500753985 /* NetworkChainProtocol.swift in Sources */,
 				8236DA782738033400753985 /* SearchSBHandler.swift in Sources */,
 				8236DA522737D8A000753985 /* shortcut_code_challenge.xcdatamodeld in Sources */,
+				8236DA97273850AC00753985 /* Response200.swift in Sources */,
 				8236DA87273807A800753985 /* ComicEntity+CoreDataClass.swift in Sources */,
 				8236DA88273807A800753985 /* ComicEntity+CoreDataProperties.swift in Sources */,
 				8236DA652737DA1F00753985 /* Int.swift in Sources */,
 				8236DA8D2738420100753985 /* FavoriteTVHandler.swift in Sources */,
 				8236DA70273801F800753985 /* BrowseTVC.swift in Sources */,
+				8236DA9D27385E3C00753985 /* UIWindow.swift in Sources */,
 				8236DA8B273841EB00753985 /* FavoriteVC.swift in Sources */,
 				8236DA482737D8A000753985 /* AppDelegate.swift in Sources */,
 				8236DA74273802C000753985 /* WaitingTVC.swift in Sources */,

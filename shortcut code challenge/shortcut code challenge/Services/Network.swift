@@ -55,28 +55,53 @@ public final class Network {
             return
         }
         
+        var state200: NetworkChainProtocol = Response200()
+        var state404: NetworkChainProtocol = NotResponse404()
+        let state500: NetworkChainProtocol = ServerError500()
+        
+        
+        state200.next = state404
+        state404.next = state500
+        
+        
+        
         let task = session.dataTask(with: strongUrl) { (data, response, error) in
-            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode.isSuccessHTTPCode, let data = data else {
-                if let httpStatusResponse = response as? HTTPURLResponse {
-                    switch httpStatusResponse.statusCode {
-                        
-                    case 200...300: failure(.unknownError(errorDescription: "an error on getting data was accured"))
-                        
-                    case 404: failure(.notFound)
-                    
-                    case 500: failure(.internalServerError)
-                        
-                    default: failure(.unknownError(errorDescription: "unknown status code has been received"))
-                        
-                    }
-                } else {
-                    failure(.unknownError(errorDescription: "client cannot get HTTPStatus code"))
-                }
-                return
-            }
             
-            let retObj = try! JSONDecoder().decode(T.self, from: data)
-                success(retObj)
+            if let httpResponse = response as? HTTPURLResponse, let data = data {
+                do {
+                    let val: T = try state200.calculate(data, status: httpResponse.statusCode)
+                    success(val)
+                } catch {
+                    if let err = error as? NetworkErrors {
+                        failure(err)
+                    } else {
+                        failure(.unknownError(errorDescription: error.localizedDescription))
+                    }
+                }
+            } else {
+                failure(.unknownError(errorDescription: "server did not respond"))
+            }
+//            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode.isSuccessHTTPCode, let data = data else {
+//                if let httpStatusResponse = response as? HTTPURLResponse {
+//                    switch httpStatusResponse.statusCode {
+//
+//                    case 200...300: failure(.unknownError(errorDescription: "an error on getting data was accured"))
+//
+//                    case 404: failure(.notFound)
+//
+//                    case 500: failure(.internalServerError)
+//
+//                    default: failure(.unknownError(errorDescription: "unknown status code has been received"))
+//
+//                    }
+//                } else {
+//                    failure(.unknownError(errorDescription: "client cannot get HTTPStatus code"))
+//                }
+//                return
+//            }
+//
+//            let retObj = try! JSONDecoder().decode(T.self, from: data)
+//                success(retObj)
         }
         
         task.resume()
