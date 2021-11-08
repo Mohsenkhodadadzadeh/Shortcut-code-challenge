@@ -43,6 +43,8 @@ this class consist of network error types and it consist of two parts networkErr
 
 this Plist file has two string parameters that are used for creating URL
 
+------
+
 
 #### withDesignPatterns Branch
 
@@ -55,6 +57,10 @@ this group responsible to download image and send to detailVC
 This group responsible for throwing objec model or choose appropriate action if the server's response status code is not success
 
 
+
+
+
+
 ### Extensions
 
 #### development branch
@@ -64,9 +70,18 @@ there is just one swift onject is extended in this project (Int) and I just adde
 #### withDesignPatterns branch
 there is a new extension here for UIWindow that includes a func to get the root viewcontroller
 
+
+
+
+
+
+
 ### Model
 
 model has 3 classes that one of them related to remote API (ComicModel) and two others use for CoreData.
+
+
+
 
 
 ### Viewcontroller
@@ -109,6 +124,10 @@ this class uses to show comic cells
  
  this extension uses to get push notification permission from user. it is called on `BrowseVC->viewDidLoad()`
  
+ 
+ ----
+ 
+ 
  #### DetailVC
  
  this class the only class for detail view, 
@@ -119,6 +138,10 @@ this class uses to show comic cells
 
 ##### withDesignPatterns Branch
 here is new file called `DetailImageDownloader` that manages observer extension of detailVC.
+
+
+----
+
 
 #### Favorite Controller
 
@@ -147,17 +170,35 @@ the is an extension of favoriteVC for handling its tableview.
     }
 ```
 
+
+
+
+
+
 ### IBDesignable
 
 there is just a class to create a custom rounded button for using as share button `Custom Button.swift`
+
+
+
+
+
 
 ### Enums
 
 #### publicNamesEnum.swift
 this enum file uses for saving public keys for communicate to userDefaults to save and fetch simple objects.
 
+
+
+
+
 ### notify new comics
 it is handled by `BGTaskScheduler` that is defined on appDelegate.
+
+
+
+
 
 
 ### More Informations about the project
